@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./style.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import LandingPage from "./Routes/LandingPage.jsx";
+import PosterOne from "./Routes/PosterOne.jsx";
+import PosterTwo from "./Routes/PosterTwo.jsx";
+import PosterThree from "./Routes/PosterThree.jsx";
+import NoContent from "./Routes/NoContent.jsx";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<LandingPage />} />
+				<Route path="/PosterOne" element={<PosterOne />} />
+				<Route path="/PosterTwo" element={<PosterTwo />} />
+				<Route path="/PosterThree" element={<PosterThree />} />
+				<Route path="*" element={<NoContent />} />
+			</Routes>
+		</Router>
+	);
 }
-
 export default App;

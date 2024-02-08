@@ -1,0 +1,28 @@
+/* Add this CSS to your stylesheets or create a separate CSS file */
+nav {
+	background-color: #333; /* Background color of the navbar */
+	padding: 10px; /* Padding around the navbar items */
+}
+
+ul {
+	list-style-type: none; /* Remove default list styling */
+	margin: 0;
+	padding: 0;
+	display: flex; /* Display the list items horizontally */
+}
+
+li {
+	margin-right: 15px; /* Add some spacing between list items */
+}
+
+/* Style the links */
+a {
+	text-decoration: none; /* Remove underline from links */
+	color: white; /* Text color for links */
+	font-weight: bold; /* Bold font for links */
+}
+
+/* Hover effect on links */
+a:hover {
+	color: #ffcc00; /* Change text color on hover */
+}
